@@ -6,7 +6,7 @@ const app = express();
 
 // middlewares
 // app.use(cors({ origin: true }));
-
+const PORT = process.env.PORT || 5000;
 // Allow all origins
 app.use(cors({
   origin: (origin, callback) => {
@@ -48,4 +48,4 @@ let a = req.body.a;
     res.json({ways: ans});
 });
 
-app.listen(3000, () => console.log(`Server on PORT: 3000`));
+app.listen(PORT, () => console.log(`Server on PORT: ${PORT}`));
