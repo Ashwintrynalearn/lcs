@@ -41,7 +41,7 @@ function helper(a,sum,n){
 
 
 app.get("/api/ans", (req, res) => {
-let a = req.body.a;
+let a = req.query.a;
    let arr = [1,2,5,10];
   
     let ans = helper(arr,a,arr.length);
